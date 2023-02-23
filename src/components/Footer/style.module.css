@@ -11,12 +11,14 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 10px 10px 10px 10px;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  justify-content: space-around;
 }
 
 .col {
@@ -103,6 +105,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 40px;
+    justify-content: space-around;
   }
 
   .col:last-child {

@@ -36,7 +36,11 @@ const Board = ({ field, onClickCell }) => {
       {board.map((row, x) => (
         <div className={s.row} key={x}>
           {row.map((ceil, y) => (
-            <Cell key={`${x}-${y}`} onClickCell={onClickCell} onClick={() => onClickCell(x, y)} isShip={isShipCeil(x, y)} />))}
+            <Cell
+              key={`${x}-${y}`}
+              onClickCell={onClickCell}
+              onClick={() => onClickCell(x, y)}
+              isShip={isShipCeil(x, y)} />))}
         </div>))}
     </div>
   )
@@ -58,10 +62,10 @@ export const Battleship = () => {
       <div className={s.info}>
         <div>Shots: {shots}</div>
         <div>Hits: {hits}</div>
-        { (hits===20) && <div className={s.title}> ПОЗДРАВЛЯЕМ!!! ПОБЕДА НА {`${shots}`} ВЫСТРЕЛЕ!</div>}
+        {(hits === 20) && <div className={s.title}> ПОЗДРАВЛЯЕМ!!! ПОБЕДА НА {`${shots}`} ВЫСТРЕЛЕ!</div>}
       </div>
       <Board field={FIELD_BATTLESHIP} onClickCell={onClickCell}></Board>
-      
+
     </>
   )
 }

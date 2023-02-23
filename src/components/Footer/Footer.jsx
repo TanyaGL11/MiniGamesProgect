@@ -7,7 +7,6 @@ import instagram from './img/instagram.svg'
 import viber from './img/viber.svg'
 import whatsapp from './img/whatsapp.svg'
 import vk from './img/vk.svg'
-
 import s from './style.module.css'
 
 export const Footer = () => {
